@@ -33,6 +33,7 @@ class Php < Formula
   depends_on "pcre"
   depends_on "unixodbc"
   depends_on "webp"
+  depends_on "sqlite3"
 
   needs :cxx11
 
@@ -105,6 +106,7 @@ class Php < Formula
       --with-sodium=#{Formula["libsodium"].opt_prefix}
       --with-unixODBC=#{Formula["unixodbc"].opt_prefix}
       --with-webp-dir=#{Formula["webp"].opt_prefix}
+      --with-sqlite3=#{Formula["sqlite3"].opt_prefix}
     ]
 
     if MacOS.version < :lion
