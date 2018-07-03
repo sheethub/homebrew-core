@@ -86,6 +86,7 @@ class Php < Formula
       --enable-pdo
       --enable-xml
       --enable-libxml
+      --enable-mbstring
       --with-apxs2=#{Formula["httpd"].opt_bin}/apxs
       --with-freetype-dir=#{Formula["freetype"].opt_prefix}
       --with-gettext=#{Formula["gettext"].opt_prefix}
