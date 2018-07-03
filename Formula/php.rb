@@ -81,65 +81,30 @@ class Php < Formula
       --with-config-file-path=#{config_path}
       --with-config-file-scan-dir=#{config_path}/conf.d
       --with-pear=#{pkgshare}/pear
-      --enable-bcmath
-      --enable-calendar
-      --enable-dba
-      --enable-dtrace
-      --enable-exif
-      --enable-ftp
-      --enable-fpm
-      --enable-intl
-      --enable-mbregex
-      --enable-mbstring
-      --enable-mysqlnd
-      --enable-opcache-file
-      --enable-pcntl
-      --enable-phpdbg
-      --enable-phpdbg-webhelper
-      --enable-shmop
-      --enable-soap
-      --enable-sockets
-      --enable-sysvmsg
-      --enable-sysvsem
-      --enable-sysvshm
-      --enable-wddx
-      --enable-zip
+      --disable-all
+      --enable-pdo
+      --enable-xml
+      --enable-libxml
       --with-apxs2=#{Formula["httpd"].opt_bin}/apxs
-      --with-bz2
-      --with-fpm-user=_www
-      --with-fpm-group=_www
       --with-freetype-dir=#{Formula["freetype"].opt_prefix}
-      --with-gd
       --with-gettext=#{Formula["gettext"].opt_prefix}
       --with-gmp=#{Formula["gmp"].opt_prefix}
       --with-icu-dir=#{Formula["icu4c"].opt_prefix}
       --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
-      --with-kerberos
-      --with-layout=GNU
-      --with-ldap
-      --with-ldap-sasl
-      --with-libedit
-      --with-libzip
-      --with-mhash
-      --with-mysql-sock=/tmp/mysql.sock
-      --with-mysqli=mysqlnd
-      --with-ndbm
+      --with-gdbm=#{Formula["gdbm"].opt_prefix}
       --with-openssl=#{Formula["openssl"].opt_prefix}
       --with-password-argon2=#{Formula["argon2"].opt_prefix}
       --with-pdo-dblib=#{Formula["freetds"].opt_prefix}
-      --with-pdo-mysql=mysqlnd
       --with-pdo-odbc=unixODBC,#{Formula["unixodbc"].opt_prefix}
       --with-pdo-pgsql=#{Formula["libpq"].opt_prefix}
       --with-pgsql=#{Formula["libpq"].opt_prefix}
-      --with-pic
       --with-png-dir=#{Formula["libpng"].opt_prefix}
+      --with-zlib-dir=#{Formula["zlib"].opt_prefix}
+      --with-bz2=#{Formula["bzip2"].opt_prefix}
       --with-pspell=#{Formula["aspell"].opt_prefix}
       --with-sodium=#{Formula["libsodium"].opt_prefix}
       --with-unixODBC=#{Formula["unixodbc"].opt_prefix}
       --with-webp-dir=#{Formula["webp"].opt_prefix}
-      --with-xmlrpc
-      --with-xsl
-      --with-zlib
     ]
 
     if MacOS.version < :lion
